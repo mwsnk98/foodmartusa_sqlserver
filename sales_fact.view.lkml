@@ -1,6 +1,16 @@
 view: sales_fact {
   sql_table_name: dbo.sales_fact ;;
 
+  dimension: time_marker_s1 {
+    type: string
+    sql: 'marker_s1' ;;
+  }
+
+  dimension: time_marker_s2 {
+    type: string
+    sql: 'marker_s2' ;;
+  }
+
    dimension: customer_id {
     type: number
     # hidden: yes
