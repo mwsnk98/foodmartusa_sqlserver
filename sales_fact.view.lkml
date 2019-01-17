@@ -94,7 +94,12 @@ view: sales_fact {
   measure: total_store_sales {
     type: sum
     sql: ${store_sales} ;;
-    drill_fields: [detail*]
+    drill_fields: [sales_fact.total_store_sales,sales_fact.sales_year,product_class.product_category]
+    link: {
+      label: "Yearly Product Sales"
+      url: "/dashboards/14?Region={{ region.name._value | encode_uri }}&Product%20Family={{ product_class.product_family._value | encode_uri }}"
+      icon_url: "/favicon.ico"
+    }
   }
 
   measure: total_unit_sales {
