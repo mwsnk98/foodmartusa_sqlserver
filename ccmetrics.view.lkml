@@ -1,5 +1,5 @@
 view: ccmetrics {
-  sql_table_name: actian.ccmetrics ;;
+  sql_table_name: dbo.ccmetrics ;;
 
   dimension: queryloopuser {
     type: string
