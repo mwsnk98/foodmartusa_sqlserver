@@ -2,6 +2,7 @@ connection: "sqlserverfoodmartusa"
 
 # include all the views
 include: "*.view"
+include: "*.dashboard"
 
 datagroup: foodmartusa_sqlserver_default_datagroup {
   sql_trigger: SELECT getdate();;
